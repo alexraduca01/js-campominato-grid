@@ -15,8 +15,10 @@
 function squareGen() {
 
     wrapper.classList.remove('d-none');
+    returnButton.classList.remove('d-none');
     btn.classList.add('d-none');
     select.classList.add('d-none');
+    
 
     const squareNumber = parseInt(document.querySelector('select').value);
 
@@ -27,15 +29,21 @@ function squareGen() {
         square.style.height = `calc(100% / ${Math.sqrt(squareNumber)})`;
         wrapper.append(square);
         square.innerHTML = (a);
+        
         square.addEventListener('click', function(){
             square.classList.add('bg-sky', 'text-white');
+            console.log(this.innerText);
         })
     }
 
 }
 
+const returnButton = document.getElementById('return-button');
 const select = document.querySelector('select');
 const btn = document.querySelector('button');
 const wrapper = document.getElementById('wrapper');
 
 btn.addEventListener('click', squareGen);
+returnButton.addEventListener('click', function(){
+    location.reload();
+})
