@@ -5,3 +5,33 @@
     --xanthous: #f7b32bff;
     --dark-purple: #2d1e2fff;
 }
+
+/* utility */
+button {
+    width: 10%;
+    height: 10%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#wrapper {
+    margin: 80px auto;
+    background-color: var(--dark-purple);
+    height: 1000px;
+    width: 1000px;
+    display: flex;
+    flex-wrap: wrap;
+}
+.square {
+    border: 1px solid var(--dark-purple);
+    background-color: var(--vanilla);
+    width: calc(100% / 10);
+    height: calc(100% / 10);
+}
+
+/* colors */
+
+.bg-sky {
+    background-color: skyblue;
+}
