@@ -8,14 +8,6 @@
 
 /* utility */
 
-button {
-    width: 10%;
-    height: 10%;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-}
 #wrapper {
     margin: 80px auto;
     background-color: var(--dark-purple);
@@ -27,8 +19,11 @@ button {
 .square {
     border: 1px solid var(--dark-purple);
     background-color: var(--vanilla);
-    width: calc(100% / 10);
-    height: calc(100% / 10);
+    cursor: pointer;
+}
+button {
+    width: 10%;
+    height: 10%;
 }
 
 /* colors */

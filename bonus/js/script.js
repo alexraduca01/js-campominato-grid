@@ -16,12 +16,15 @@ function squareGen() {
 
     wrapper.classList.remove('d-none');
     btn.classList.add('d-none');
+    select.classList.add('d-none');
 
-    const squareNumber = 100;
+    const squareNumber = parseInt(document.querySelector('select').value);
 
     for(let a = 1; a <= squareNumber; a++){
         const square = document.createElement('div');
         square.classList.add('square', 'd-flex', 'justify-content-center', 'align-items-center');
+        square.style.width = `calc(100% / ${Math.sqrt(squareNumber)})`;
+        square.style.height = `calc(100% / ${Math.sqrt(squareNumber)})`;
         wrapper.append(square);
         square.innerHTML = (a);
         square.addEventListener('click', function(){
@@ -31,7 +34,8 @@ function squareGen() {
 
 }
 
+const select = document.querySelector('select');
 const btn = document.querySelector('button');
 const wrapper = document.getElementById('wrapper');
 
-btn.addEventListener('click', squareGen)
+btn.addEventListener('click', squareGen);
